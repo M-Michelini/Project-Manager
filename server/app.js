@@ -7,10 +7,7 @@ const PORT = process.env.PORT || 3000
 
 const app = express();
 
-//setup ejs as the default template engine.
-app.set('view engine','ejs')
-
-//setup body-parser so that
+//Setup body-parser so that form posts will be inside req.body
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 

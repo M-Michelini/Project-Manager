@@ -1,0 +1,13 @@
+.legend{
+  display:flex;
+}
+.legend-item{
+  width:150px;
+}
+
+.success{
+  color:green;
+}
+.in-progress{
+  color:blue;
+}
