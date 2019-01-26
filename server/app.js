@@ -32,3 +32,5 @@ app.use((req,res)=>{
 app.listen(PORT, () => {
   console.log('Your app is listening on port ' + PORT);
 })
+
+module.exports = app; //for mocha tests.
