@@ -3,6 +3,8 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const landingRoute = require('./routes');
+
 const PORT = process.env.PORT || 3000
 
 const app = express();
@@ -14,8 +16,18 @@ app.use(bodyParser.json())
 //setup public directory
 app.use(express.static('public'));
 
-//this is where the main routing logic will go.
-app.use('/',require('./routes'))
+//This is where the main routing logic will go.
+app.use('/api',landingRoute)
+
+//If a response still hasnt been sent, default to sending an error message
+app.use((req,res)=>{
+  let err = new Error("Whoops. Something went wrong!");
+  err.status = 404;
+  res.status(err.status).json({
+    errorMessage:err.message
+  })
+});
+
 
 app.listen(PORT, () => {
   console.log('Your app is listening on port ' + PORT);
