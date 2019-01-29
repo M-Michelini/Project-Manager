@@ -1,32 +1,187 @@
-.App {
-  text-align: center;
+:root {
+  --light-grey: #f5f7f6;
+  --main-green: #02bb6c;
+  --main-black: #1a1a1a;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Sarabun", sans-serif;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@import url("https://fonts.googleapis.com/css?family=Sarabun:400,500,600,600i,800");
+
+.landing-container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  background-color: var(--light-grey);
+  font-family: "Sarabun", sans-serif;
+}
+
+.landing-logo {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  align-self: center;
+  justify-self: center;
+  transform: translate(40%, 0);
+  background-image: url("logo.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 110px;
+  width: 110px;
+}
+
+.landing-navbar {
+  grid-column: 8/13;
+  align-self: center;
+
+  font-weight: 800;
+  font-size: 18px;
+  transform: translate(0, 50%);
+}
+
+.landing-navbar ul {
+  list-style: none;
+}
+
+.landing-navbar ul li {
+  display: inline-block;
+  padding-right: 50px;
+}
+
+.intro-bckgd-square {
+  background-color: var(--main-green);
+  grid-column: 1/6;
+  grid-row: 3/13;
+  border-radius: 0 65px 0 0;
+  position: relative;
+}
+
+.intro-text {
+  width: 100%;
+  height: 100%;
+}
+
+.intro-text-header {
   color: white;
+  font-size: 30px;
+  padding-top: 50px;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
-.App-link {
-  color: #61dafb;
+.intro-text-list {
+  padding-top: 15%;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 22px;
+  font-weight: 600;
+}
+.intro-text-list ul {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.intro-text-list ul li:last-child {
+  list-style: none;
+  color: white;
+  font-weight: 900;
+  line-height: 1.7;
+}
+
+.auth-container {
+  grid-column: 8/12;
+  grid-row: 4/10;
+  background-color: white;
+  border-radius: 10px;
+  width: 280px;
+  height: 100%;
+  -webkit-box-shadow: 3px 3px 68px -12px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 3px 3px 68px -12px rgba(0, 0, 0, 0.59);
+  box-shadow: 3px 3px 68px -12px rgba(0, 0, 0, 0.59);
+  position: relative;
+}
+
+.auth-form {
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+
+.form-header span {
+  font-size: 26px;
+  font-weight: 900;
+  padding: 50px 0 20px 10px;
+}
+
+.form-login {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.login-input-container {
+  margin-top: 20px;
+}
+
+.login-input-container p {
+  padding-bottom: 8px;
+  font-weight: 900;
+  color: var(--main-green);
+}
+
+.form-login input {
+  width: 100%;
+  height: 25px;
+  padding: 5px;
+  border: 0;
+  background-color: var(--light-grey);
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-login input::placeholder {
+  opacity: 0.6;
+  font-weight: 900;
+  padding-left: 12px;
+  font-size: 12px;
+}
+
+.forgot-pass {
+  padding-top: 6px;
+  font-size: 10px;
+  color: var(--main-green);
+  font-weight: 900;
+  text-align: right;
+}
+
+.auth-btn {
+  background-color: var(--main-green);
+
+  width: 100%;
+  margin: 15% auto 0 auto;
+  padding: 10px;
+  height: 35px;
+  position: relative;
+}
+
+.auth-btn span {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-weight: 800;
 }
