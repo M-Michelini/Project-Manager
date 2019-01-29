@@ -6,6 +6,9 @@
 <<<<<<< HEAD
 =======
     "start": "node app.js"
+<<<<<<< HEAD
+>>>>>>> 1494eb2fa009d2bc9e82a27f8885dda753e7ccf0
+=======
 >>>>>>> 1494eb2fa009d2bc9e82a27f8885dda753e7ccf0
     "start": "node app.js",
     "test": "mocha"
