@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const landingRoute = require('./routes');
+const authRoutes = require('./routes/auth');
 
 const PORT = process.env.PORT || 3000
 
@@ -17,7 +18,8 @@ app.use(bodyParser.json())
 app.use(express.static('public'));
 
 //This is where the main routing logic will go.
-app.use('/api',landingRoute)
+app.use('/api',landingRoute);
+app.use('/api',authRoutes);
 
 //If a response still hasnt been sent, default to sending an error message
 app.use((req,res)=>{
