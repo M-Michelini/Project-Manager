@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000
 const app = express();
 
 //Setup body-parser so that form posts will be inside req.body
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 //setup public directory
@@ -26,7 +26,7 @@ app.use((req,res)=>{
   let err = new Error("Whoops. Something went wrong!");
   err.status = 404;
   res.status(err.status).json({
-    errorMessage:err.message
+    message:err.message
   })
 });
 
