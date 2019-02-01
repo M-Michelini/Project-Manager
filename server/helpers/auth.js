@@ -8,7 +8,7 @@ exports.login = (req,res)=>{
     user.comparePassword(password,(err,isMatch)=>{
       if(isMatch){
         var token = jwt.sign({userId: user._id},process.env.SECRET);
-        res.status(200).json({
+        res.status(202).json({
           _id:user._id,
           name:`${user.firstName} ${user.lastName}`,
           username:user.username,
@@ -18,7 +18,7 @@ exports.login = (req,res)=>{
         })
       }
       else{
-        res.status(404).json({message:'Invalid password!'})
+        res.status(401).json({message:'Invalid password!'})
       }
     })
   }).catch(err=>{

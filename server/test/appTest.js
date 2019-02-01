@@ -93,7 +93,7 @@ describe('Functional tests for CleanFlow API',()=>{
         .send({email:'test@email.com',password:'testpassword'})
         .end(function(err,res){
           assert.isNotOk(err)
-          assert.equal(res.status,200);
+          assert.equal(res.status,202);
           assert.equal(res.body.name,'michael michelini');
           assert.equal(res.body.username,'mmichelini');
           assert.equal(res.body.email,'test@email.com');
@@ -110,7 +110,7 @@ describe('Functional tests for CleanFlow API',()=>{
         .send({email:'test@email.com',password:'wrongpassword'})
         .end(function(err,res){
           assert.isNotOk(err);
-          assert.equal(res.status,404);
+          assert.equal(res.status,401);
           assert.exists(res.body.message);
           assert.equal(res.body.message,'Invalid password!');
           done();
@@ -170,6 +170,7 @@ describe('Functional tests for CleanFlow API',()=>{
         .end(function(err,res){
           assert.isNotOk(err)
           assert.equal(res.status,202);
+          assert.equal(res.body.message,"Successfully deleted user.");
           done();
         });
       });
