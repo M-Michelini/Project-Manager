@@ -117,7 +117,7 @@ describe('Functional tests for CleanFlow API',()=>{
         });
       });
 
-      it('Should try and fail login with invalid password',(done)=>{
+      it('Should try and fail login with invalid email',(done)=>{
         chai.request(app)
         .post('/api/auth/login')
         .set('content-type','application/json')
