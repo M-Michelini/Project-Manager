@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CleanFlow API</title>
+    <link rel='stylesheet' href='/styles.css' /><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>User Stories</h1>
+    <ul class='legend'>
+      <li class='legend-item success'><i class="fas fa-check"></i> - Complete</li>
+      <li class='legend-item in-progress'><i class="fas fa-spinner"></i> - In Progress</li>
+    </ul>
+    <ul>
+      <li class='in-progress'>
+        I can POST a username, email, password and timezone to api/register to
+        hash the password, then store that info in a mongo database. <i class="fas fa-spinner"></i>
+      </li>
+      <li class='in-progress'>
+        I can POST a username and password to api/login to
+        hash the password, then compare it to the one in the a mongo database. <i class="fas fa-spinner"></i>
+      </li>
+      <li class='in-progress'>
+        If the POST to api/login is successful, the server will respond with the
+        username, email, timezone and a jsonwebtoken to be stored in the
+        clients cookies. This allows validation without a password. <i class="fas fa-spinner"></i>
+      </li>
+    </ul>
+  </body>
+</html>
