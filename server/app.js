@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const landingRoute = require('./routes');
 const authRoutes = require('./routes/auth');
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001
 
 const app = express();
 
