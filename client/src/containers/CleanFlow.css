@@ -29,7 +29,7 @@
   align-self: center;
   justify-self: center;
   transform: translate(40%, 0);
-  background-image: url("logo.svg");
+  background-image: url("../logo.svg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 110px;

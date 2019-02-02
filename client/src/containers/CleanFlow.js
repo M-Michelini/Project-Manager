@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Landing from "./components/Landing";
+import Landing from "../components/Landing";
 
-import "./App.css";
+import "./CleanFlow.css";
 
-class App extends Component {
+class CleanFlow extends Component {
   render() {
     return (
       <Router>
@@ -17,4 +17,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default CleanFlow;
