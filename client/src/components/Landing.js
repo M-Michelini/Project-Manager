@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+
 class Landing extends Component {
   render() {
     return (
@@ -60,7 +60,8 @@ class Landing extends Component {
               </div>
 
               <div className="forgot-pass">
-                <a className="forgot-pass-link">Forgot password?</a>
+                {/*currently redirects to Landing Page*/}
+                <a href='/' className="forgot-pass-link">Forgot password?</a>
               </div>
 
               <div className="auth-btn">
